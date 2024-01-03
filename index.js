@@ -17,6 +17,10 @@ app.use('/admin', adminRoutes);
 //student Routes
 app.use('/student', studentRoutes);
 
+app.use('/', (req, res)=> {
+  return res.json({message: "Student Management API is working follow this documentation https://documenter.getpostman.com/view/26807468/2s9YsFFEi5"})
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
